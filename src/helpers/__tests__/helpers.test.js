@@ -28,7 +28,15 @@ describe('sum', () => {
 
 describe('multiply', () => {
   // write tests! <================================================
-  
+  it('multiples two number correctly', () => {
+    expect(helpers.multiply(2, 2)).toBe(4);
+  });
+  it('throws if the args are not numbers', () => {
+    expect(() => helpers.multiply('2', '3')).toThrow();
+  });
+  it('returns null if fed no args', () => {
+    expect(helpers.multiply().toBe(null))
+  })
 });
 
 describe('personMaker', () => {
@@ -39,6 +47,7 @@ describe('personMaker', () => {
         name: 'peter',
         age: 4,
       });
+      
   });
 
   // write more tests! <===========================================
